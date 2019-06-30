@@ -1,0 +1,1 @@
+# singaporeXchange-swift
