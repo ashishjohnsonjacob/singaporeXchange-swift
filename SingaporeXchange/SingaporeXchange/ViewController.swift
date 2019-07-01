@@ -47,10 +47,10 @@ class ViewController: UIViewController {
                 {
                     let rateDouble = json["SGD_INR"] as? Double
                     let amount: Double = Double(round(100*rateDouble!)/100)
-                    let finalAmount: Double = value! * amount
+                    let finalAmount: Double = Double(round(100*(value! * amount))/100)
                     print(finalAmount)
                     DispatchQueue.main.async {
-                         self.inrLabel.text = String(finalAmount) + " INR"
+                         self.inrLabel.text = String(value!) + " SGD = " + String(finalAmount) + " INR"
                     }
                 }
                 
